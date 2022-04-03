@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        body{
+            margin:0;
+            padding:0;
+            background:gray;
+        }
+        .box{
+            width:700px;
+            height:400px;
+            overflow:hidden;
+        }
+        .n{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+        .s{
+            position:absolute;
+            bottom:20px;
+            left:50%;
+            transform:translateX(-50%);
+            display:flex;
+        }
+        .bar{
+            width:50px;
+            height:10px;
+            border:2px solid #fff;
+            margin:6px;
+            cursor:pointer;
+            transition:0.4s;
+        }
+        .bar:hover{
+            background:#fff;
+        }
+        input[name="r"]{
+            position: absolute;
+            visibility: hidden;
+        }
+        .boxs{
+            width:700%;
+            height:100%;
+            display:flex;
+        }
+        .box-img{
+            width:20%;
+            transition:0.6s;
+        }
+        .box-img img{
+            width:100%;
+            height:100%;
+        }
+        #r1:checked ~ .s1 {
+            margin-left: 0;
+        }
+
+        #r2:checked ~ .s1 {
+            margin-left: -20%;
+        }
+
+        #r3:checked ~ .s1 {
+            margin-left: -40%;
+        }
+
+        #r4:checked ~ .s1 {
+            margin-left: -60%;
+        }
+
+        #r5:checked ~ .s1 {
+            margin-left: -80%;
+        }
+
+        #r6:checked ~ .s1 {
+            margin-left: -100%;
+        }
+    </style>
+</head>
+<body>
+    <audio src="./love.mp3" autoplay loop></audio>
+    <center>
+        <div class="box n">
+            <div class="boxs">
+                <input type="radio" name="r" id="r1" checked/>
+                <input type="radio" name="r" id="r2" />
+                <input type="radio" name="r" id="r3" />
+                <input type="radio" name="r" id="r4" />
+                <input type="radio" name="r" id="r5" />
+                <input type="radio" name="r" id="r6" />
+                <div class="box-img s1"><img src="./2.jpg" width="500" height="640" /></div>
+                <div class="box-img"><img src="./1.jpg" width="500" height="640" /></div>
+                <div class="box-img"><img src="./3.jpg" width="500" height="640" /></div>
+                <div class="box-img"><img src="./4.jpg" width="500" height="640" /></div>
+                <div class="box-img"><img src="./5.jpg" width="500" height="640" /></div>
+                <div class="box-img"><img src="./6.jpg" width="500" height="640" /></div>
+            </div>
+            <div class="s">
+                <lable for="r1" class="bar"></lable>
+                <lable for="r2" class="bar"></lable>
+                <lable for="r3" class="bar"></lable>
+                <lable for="r4" class="bar"></lable>
+                <lable for="r5" class="bar"></lable>
+                <lable for="r6" class="bar"></lable>
+
+            </div>
+        </div>
+    </center>
+</body>
+</html>
